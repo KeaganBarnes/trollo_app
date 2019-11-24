@@ -1,0 +1,11 @@
+<h1> Programs </h1>
+<%= link_to "Add Program", new_program_path %>
+<hr />
+
+<% @programs.each do |program| %>
+  <div>
+    <h3> <%= link_to program.name, program_path(program) %> </h3>
+  </div>
+
+<% end %> 
+

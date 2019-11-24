@@ -1,0 +1,8 @@
+<%= link_to "|Back|", program_path(@program) %>
+<h1> <%= @program.name %>  </h1>
+<hr />
+  <% @workouts.each do |workout| %>
+  <div>
+    <h3> <%= link_to workout.week + ", " + workout.day, program_workout_path(@program, workout) %> </h3>
+  </div>
+<% end %> 

@@ -1,0 +1,28 @@
+<%= form_with(model: @workout, local: true, class: "ui form", url: "/programs/#{@program.id}/workouts/#{@workout.id}") do |f| %>
+  <div class="field">
+    <%= f.label :lift %>
+    <%= f.text_field :lift, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :sets %>
+    <%= f.select :sets, [['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['10']] %>
+  </div>
+  <div class="field">
+    <%= f.label :reps %>
+    <%= f.select :reps, [['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['10'], ['12'], ['13'], ['14'],['15'], ['20'], ['AMRAP']] %>
+  </div>
+  <div class="field">
+    <%= f.label :percentage %>
+    <%= f.select :percentage, [['45%'], ['50%'], ['55%'], ['60%'], ['65%'], ['70%'], ['75%'], ['80%'], ['85%'], ['90%'], ['95%'], ['100%'], ['MAX OUT']] %>
+  </div>
+  <div class="field">
+    <%= f.label :week %>
+    <%= f.select :week, [['Week 1'], ['Week 2'], ['Week 3'], ['Week 4'], ['Week 5'], ['Week 6'], ['Week 7'], ['Week 8'], ['Week 9'], ['Week 10'], ['Week 11'], ['Week 12']] %>
+  </div>
+  <div class="field">
+    <%= f.label :day %>
+    <%= f.select :day, [['Day 1'], ['Day 2'], ['Day 3'], ['Day 4'], ['Day 5'], ['Day 6'], ['Day 7']] %>
+  </div>
+  <br/>
+  <%= f.submit nil, class: "ui green button inverted" %>
+<% end %>
