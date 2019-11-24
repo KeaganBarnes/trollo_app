@@ -1,4 +1,12 @@
-@import "semantic-ui"
+@import "semantic-ui";
 
+body {
+  background-image: url(http://www.baltana.com/files/wallpapers-5/Metal-Background-Nice-Wallpaper-16393.jpg);
+}
 
+.ui.card,
+.ui.cards>.card {
+  background-color: rgb(36, 36, 36);
+  color: rgb(255, 255, 255);
+}
 

@@ -1,10 +1,10 @@
-<%= link_to "Back", program_workouts_path %>
-<h1> <%= @program.name %> </h1>
+<%= link_to "|Back|", program_workouts_path %>
+<h1 class="ui grey inverted header"> <%= @program.name %> </h1>
 <%= link_to "|Add Workout|", new_program_workout_path %>
 <hr />
 
-<h3> <%= @workout.week %> - <%= @workout.day %> </h3> 
-<h4> <%= @workout.lift %> : <%= @workout.sets %> x <%= @workout.reps %> (@<%= @workout.percentage %>) </h4>
+<h3 class="ui grey inverted header"> <%= @workout.week %> - <%= @workout.day %> </h3> 
+<h4 class="ui grey inverted header"> <%= @workout.lift %> : <%= @workout.sets %> x <%= @workout.reps %> (@<%= @workout.percentage %>) </h4>
 
 
 <br />

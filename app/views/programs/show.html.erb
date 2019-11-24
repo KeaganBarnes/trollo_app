@@ -1,21 +1,22 @@
-<h1> <%= @program.name %> </h1>
+<%= link_to "|Back|", programs_path %>
+<h1 class="ui grey inverted header"> <%= @program.name %> </h1>
 <hr />
 
-<h3> <%= @program.days_per_week %> per week for, <%= @program.week_duration %> </h3>
+<h3 class="ui grey inverted header"> <%= @program.days_per_week %> per week for, <%= @program.week_duration %> </h3>
 
 <div class="ui grid">
 <% @workouts.each do |workout| %>
     <div class="sixteen wide mobile eight wide tablet four wide computer column">
       <div class="ui card">
         <div class="content">
-        <h3> <%= link_to workout.week, program_workout_path(@program, workout) %> </h3>
+        <h2> <%= link_to workout.week, program_workout_path(@program, workout) %> </h2>
         </div>
         <div class="extra content">
           <div class="ui two buttons">
-            <div class="ui basic green button">
+            <div class="ui green button inverted">
             <%= link_to 'Details', program_workouts_path(@program) %>
             </div>
-            <div class="ui basic red button">
+            <div class="ui red button inverted">
               <%= link_to 'Remove', program_workout_path(@program), method: :delete %>
             </div>
           </div>
@@ -27,6 +28,8 @@
 
 
 <br />
-<%= link_to "Add Workout", new_program_workout_path(@program), class: "ui black button" %>
+<div class="ui buttons">
+<%= link_to "Add Workout", new_program_workout_path(@program), class: "ui inverted grey basic button" %>
 <%= link_to "Edit", edit_program_path(@program), class: "ui blue button inverted" %>
 <%= link_to "Delete", @program, method: :delete, class: "ui red button inverted" %>
+</div>
