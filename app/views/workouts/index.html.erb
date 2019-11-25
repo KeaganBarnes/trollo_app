@@ -1,7 +1,8 @@
 <%= link_to "|Back|", program_path(@program) %>
 <h1 class="ui grey inverted header"> <%= @program.name %>  </h1>
+<%= link_to "|Add Workout|", new_program_workout_path %>
 <hr />
-  <% @workouts.each do |workout| %>
+  <% @workouts.sort.each do |workout| %>
   <div>
     <h3 class="ui grey inverted header"> <%= link_to workout.week + ", " + workout.day, program_workout_path(@program, workout) %> </h3>
   </div>

@@ -1,4 +1,4 @@
-<%= link_to "|Back|", program_workouts_path %>
+<%= link_to "|Back|", program_workouts_path(@program) %>
 <h1 class="ui grey inverted header"> <%= @program.name %> </h1>
 <%= link_to "|Add Workout|", new_program_workout_path %>
 <hr />

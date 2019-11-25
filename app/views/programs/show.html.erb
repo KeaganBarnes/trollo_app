@@ -1,15 +1,16 @@
 <%= link_to "|Back|", programs_path %>
 <h1 class="ui grey inverted header"> <%= @program.name %> </h1>
-<hr />
-
 <h3 class="ui grey inverted header"> <%= @program.days_per_week %> per week for, <%= @program.week_duration %> </h3>
+<hr />
+<br/>
 
 <div class="ui grid">
 <% @workouts.each do |workout| %>
     <div class="sixteen wide mobile eight wide tablet four wide computer column">
       <div class="ui card">
+
         <div class="content">
-        <h2> <%= link_to workout.week, program_workout_path(@program, workout) %> </h2>
+        <h3> <%= link_to workout.week, program_workout_path(@program, workout) %> - <%= link_to workout.day, program_workout_path(@program, workout) %> </h3>
         </div>
         <div class="extra content">
           <div class="ui two buttons">
@@ -26,7 +27,7 @@
   <% end %>
 </div>
 
-
+<br/>
 <br />
 <div class="ui buttons">
 <%= link_to "Add Workout", new_program_workout_path(@program), class: "ui inverted grey basic button" %>

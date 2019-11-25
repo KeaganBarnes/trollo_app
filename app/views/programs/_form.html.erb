@@ -1,14 +1,14 @@
 <%= form_with(model: @program, local: true, class: "ui form") do |f| %>
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name, class:"ui grey inverted header"%>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :week_duration %>
+    <%= f.label :week_duration, class:"ui grey inverted header" %>
     <%= f.select :week_duration, [['4 Weeks'], ['6 Weeks'], ['8 Weeks'], ['10 Weeks'], ['12 Weeks']] %>
   </div>
   <div class="field">
-    <%= f.label :days_per_week %>
+    <%= f.label :days_per_week, class:"ui grey inverted header" %>
     <%= f.select :days_per_week, [['1 Day'],['2 Days'], ['3 Days'], ['4 Days'], ['5 days'], ['6 Days'], ['7 Days']] %>
   </div>
   <br/>
